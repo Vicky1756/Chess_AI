@@ -191,6 +191,10 @@ class GUI(tkinter.Frame):
 
             if piece is not None:
                 image_name = 'img/%s.png' % (piece.symbol())
+
+                if piece.symbol() == piece.symbol().upper():
+                    image_name = 'img/b%s.png' % (piece.symbol().upper())
+
                 piece_name = '%s%s' % (piece.symbol(), square)
 
                 if image_name not in self.icons:

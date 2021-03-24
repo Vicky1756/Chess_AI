@@ -102,3 +102,4 @@ def convert_square(square, is_white):
     row = 7 - (square // 8) if is_white else square // 8
     column = square % 8
     return (row, column)
+

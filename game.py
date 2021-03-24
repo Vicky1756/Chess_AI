@@ -7,7 +7,7 @@ import gui
 
 class Game:
     
-    board = chess.Board()
+    board = chess.Board('8/5R1P/6k1/6P1/7K/8/8/r7')
     player_turns = [choice([True, False])]
     is_player_white = player_turns[-1]
 
@@ -21,11 +21,11 @@ class Game:
 
     def start(self):
         if self.player_turns[-1]:
-            self.display.label_status["text"] = "You play as white."
+            self.display.label_status["text"] = "You play as black."
 
             self.root.after(1000, self.player_play)
         else:
-            self.display.label_status["text"] = "You play as black. The computer is thinking..."
+            self.display.label_status["text"] = "You play as white. The computer is thinking..."
 
             self.root.after(1000, self.computer_play)
 
